@@ -1,0 +1,25 @@
+---
+- hosts: 192.168.1.01
+  tasks:
+    - name: Task1
+      user:
+        name: 'ram'
+        state: 'present'
+
+    - name: Task2
+      yum:
+        name: 'httpd'
+        state: 'present'
+
+- hosts: 192.168.1.12
+  tasks:
+    - name: Testing1
+      file:
+        name: '/tmp/one'
+        state: 'present'
+
+    - name: Testing2
+      file:
+        name: '/tmp/project'
+        state: 'directory'
+...
