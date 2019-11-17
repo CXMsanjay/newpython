@@ -1,5 +1,5 @@
 ---
-- hosts: 192.168.1.01
+- hosts: 192.168.0.105
   tasks:
     - name: Task1
       user:
@@ -10,19 +10,4 @@
       yum:
         name: 'httpd'
         state: 'present'
-
-- hosts: 192.168.1.12
-  tasks:
-    - name: Testing1
-      file:
-        name: '/tmp/one'
-        state: 'present'
-
-    - name: Testing2
-      file:
-        name: '/tmp/project'
-        state: 'directory'
 ...
-
-Ok
-done
